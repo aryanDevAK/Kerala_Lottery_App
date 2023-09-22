@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Kerala Lottery</string>
+    <string name="fullName">Full Name</string>
+    <string name="mobileNumber">Mobile Number</string>
+    <string name="emailAddress">Email Address</string>
+    <string name="login">Login</string>
+    <string name="signUp">Sign Up</string>
+    <string name="text1">Already have an Account</string>
+    <string name="noteText">Do Not Share Your Lottery with anyone, Beware of fake lottery apps and websites
+that claim to be us. We do not have any website and we do not offer prize guarantees
+or any other special offers. Only purchase lottery tickets from your trusted agents.</string>
+</resources>

@@ -10,24 +10,22 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
-EditText text1, text2;
+EditText text1;
 Button btn1;
-TextView text3;
+TextView text2;
 @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         btn1 = findViewById(R.id.button);
-        text2 = findViewById(R.id.LoginNum);
-        text3 = findViewById(R.id.textView4);
+        text1 = findViewById(R.id.LoginNum);
+        text2 = findViewById(R.id.signUp);
         btn1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
                 //Getting the Username and Mobile Number Entered
                 String username = text2.getText().toString();
-                String mobileNum = text3.getText().toString();
-
                 //Check for the Username in the Database
 
                 //Generate OTP for the Mobile Number Entered
@@ -39,7 +37,7 @@ TextView text3;
         });
 
         //Function to Move to Sign in Window
-        text3.setOnClickListener(new View.OnClickListener() {
+        text2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(getApplicationContext(),SignUp.class);

@@ -24,7 +24,6 @@ import com.google.firebase.auth.PhoneAuthProvider;
 import java.util.concurrent.TimeUnit;
 
 public class SignUp extends AppCompatActivity {
-    Button signUpBtn;
     TextView loginText;
     EditText name, mobile, emailId, edtOTP;
     private FirebaseAuth mAuth;
@@ -37,57 +36,7 @@ public class SignUp extends AppCompatActivity {
         setContentView(R.layout.activity_sign_up);
 
         initializeViews();
-
-        signUpBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                // Getting the Strings input by the user
-                String input_name = name.getText().toString();
-                String mobileNum = mobile.getText().toString();
-                String email = emailId.getText().toString();
-
-                // Store the Strings in the Database
-
-                // Verify by the mobile Number by the OTP
-            }
-        });
-
-        // Setting the Login button to direct to login
-        loginText.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent i = new Intent(getApplicationContext(), SignUp.class);
-                startActivity(i);
-            }
-        });
-
-        getOtpFunction();
-    }
-
-    public void initializeViews() {
-        loginText = findViewById(R.id.textView6);
-        name = findViewById(R.id.inputName);
-        mobile = findViewById(R.id.inputPhone);
-        emailId = findViewById(R.id.inputEmail);
-        edtOTP = findViewById(R.id.inputOtp);
-        verifyOTPBtn = findViewById(R.id.signUpBtn);
-        generateOTPBtn = findViewById(R.id.verifyOtp);
-    }
-
-    public void getOtpFunction() {
         mAuth = FirebaseAuth.getInstance();
-
-        generateOTPBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (TextUtils.isEmpty(mobile.getText().toString())) {
-                    Toast.makeText(SignUp.this, "Please enter a valid phone number.", Toast.LENGTH_SHORT).show();
-                } else {
-                    String phone = "+91" + mobile.getText().toString();
-                    sendVerificationCode(phone);
-                }
-            }
-        });
 
         verifyOTPBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -99,6 +48,33 @@ public class SignUp extends AppCompatActivity {
                 }
             }
         });
+
+        // Setting the Login button to direct to login
+        loginText.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(getApplicationContext(), MainActivity.class);
+                startActivity(i);
+            }
+        });
+        generateOTPBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (TextUtils.isEmpty(mobile.getText().toString())) {
+                    Toast.makeText(getApplicationContext(), "Please enter a valid phone number.", Toast.LENGTH_SHORT).show();
+                } else {
+                    String phone = "+91" + mobile.getText().toString();
+                    sendVerificationCode(phone);
+                }
+            }
+        });
+    }
+
+    public void initializeViews() {
+        mobile = findViewById(R.id.inputPhone);
+        edtOTP = findViewById(R.id.inputOtp);
+        verifyOTPBtn = findViewById(R.id.signUpBtn);
+        generateOTPBtn = findViewById(R.id.verifyOtp);
     }
 
     private void sendVerificationCode(String number) {
@@ -121,9 +97,8 @@ public class SignUp extends AppCompatActivity {
                         if (task.isSuccessful()) {
                             // Successfully verified the OTP, you can take appropriate action here.
                             // For example, you can navigate to the next screen or perform some other task.
-                            Intent i = new Intent(SignUp.this, Activity2.class); // Replace NextActivity with your desired activity
+                            Intent i = new Intent(getApplicationContext(), Activity2.class); // Replace NextActivity with your desired activity
                             startActivity(i);
-                            finish();
                         } else {
                             // Verification failed, display an error message.
                             Toast.makeText(SignUp.this, "Verification failed. Please try again.", Toast.LENGTH_SHORT).show();

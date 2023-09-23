@@ -18,8 +18,7 @@ TextView text3;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         btn1 = findViewById(R.id.button);
-        text1 = findViewById(R.id.editText);
-        text2 = findViewById(R.id.editText2);
+        text2 = findViewById(R.id.LoginNum);
         text3 = findViewById(R.id.textView4);
         btn1.setOnClickListener(new View.OnClickListener() {
             @Override

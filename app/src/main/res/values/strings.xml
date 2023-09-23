@@ -15,6 +15,6 @@ or any other special offers. Only purchase lottery tickets from your trusted age
     <string name="home">Home</string>
     <string name="add_to_cart">Add to Cart</string>
     <string name="buy_now">Buy Now</string>
-    <string name="verify_mobile_number">Verify Mobile Number</string>
+    <string name="getOtp">Get Otp</string>
     <string name="enter_otp">Enter OTP</string>
 </resources>

@@ -13,4 +13,6 @@ or any other special offers. Only purchase lottery tickets from your trusted age
     <string name="already_have_an_account_login">Already have an Account? <u><b>Login</b></u></string>
     <string name="my_profile">My Profile</string>
     <string name="home">Home</string>
+    <string name="add_to_cart">Add to Cart</string>
+    <string name="buy_now">Buy Now</string>
 </resources>

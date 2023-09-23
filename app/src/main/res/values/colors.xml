@@ -6,4 +6,9 @@
     <color name="yellow">#EED600</color>
     <color name="red">#FF0000</color>
     <color name="lightGreen">#61A46C</color>
+    <color name="green2">#B0E26F</color>
+    <color name="orange">#ED6802</color>
+    <color name="ligthBlack">#272727</color>
+    <color name="purple">#8E40BA</color>
+    <color name="blue">#0067B0</color>
 </resources>

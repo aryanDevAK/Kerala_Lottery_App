@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@color/green">
+    android:background="@color/green2">
 
     <ImageView
         android:id="@+id/imageView3"
@@ -35,6 +35,7 @@
         android:background="@drawable/rectangle_button"
         android:gravity="center"
         android:padding="5dp"
+        android:textColor="@color/black"
         android:text="@string/add_to_cart"
         android:textSize="8sp"
         app:layout_constraintEnd_toEndOf="@+id/button2"
@@ -52,8 +53,10 @@
         android:gravity="center"
         android:padding="5dp"
         android:text="@string/buy_now"
+        android:textColor="@color/black"
         android:textSize="8sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/price" />
 
+    
 </androidx.constraintlayout.widget.ConstraintLayout>

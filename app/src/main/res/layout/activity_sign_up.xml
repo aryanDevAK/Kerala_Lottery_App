@@ -18,11 +18,12 @@
 
     <ImageView
         android:id="@+id/imageView2"
-        android:layout_width="220dp"
-        android:layout_height="220dp"
-        android:layout_marginTop="112dp"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="104dp"
         android:src="@drawable/logo"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/imageView" />
 
@@ -37,6 +38,7 @@
         android:textColor="@color/white"
         android:textColorHint="@color/white"
         android:padding="10dp"
+        android:autofillHints=""
         android:inputType="text"
         app:layout_constraintEnd_toEndOf="@+id/imageView2"
         app:layout_constraintStart_toStartOf="@+id/imageView2"
@@ -48,6 +50,7 @@
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="40dp"
         android:alpha="0.6"
+        android:autofillHints=""
         android:hint="@string/mobileNumber"
         android:textColor="@color/white"
         android:textColorHint="@color/white"
@@ -71,42 +74,67 @@
         app:layout_constraintStart_toStartOf="@+id/editText4"
         app:layout_constraintTop_toBottomOf="@+id/editText4" />
 
+    <EditText
+        android:id="@+id/editText6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="40dp"
+        android:alpha="0.6"
+        android:hint="@string/enter_otp"
+        android:padding="10dp"
+        android:autofillHints=""
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText5" />
+
     <Button
         android:id="@+id/button3"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="25dp"
+        android:layout_marginTop="8dp"
         android:backgroundTint="@color/yellow"
         android:text="@string/signUp"
         android:textColor="@color/black"
-        app:layout_constraintEnd_toEndOf="@+id/editText5"
-        app:layout_constraintHorizontal_bias="0.483"
-        app:layout_constraintStart_toStartOf="@+id/editText5"
-        app:layout_constraintTop_toBottomOf="@+id/editText5" />
+        app:layout_constraintEnd_toEndOf="@+id/button5"
+        app:layout_constraintStart_toStartOf="@+id/button5"
+        app:layout_constraintTop_toBottomOf="@+id/button5" />
 
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="@color/yellow"
+        android:text="@string/verify_mobile_number"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="@+id/editText6"
+        app:layout_constraintStart_toStartOf="@+id/editText6"
+        app:layout_constraintTop_toBottomOf="@+id/editText6" />
 
     <TextView
         android:id="@+id/textView6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="8dp"
         android:text="@string/already_have_an_account_login"
         android:textColor="@color/white"
         android:textSize="12sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/button3"
+        app:layout_constraintHorizontal_bias="0.514"
+        app:layout_constraintStart_toStartOf="@+id/button3"
         app:layout_constraintTop_toBottomOf="@+id/button3" />
 
     <TextView
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="16dp"
         android:text="@string/note"
         android:textColor="@color/red"
-        android:textSize="8sp"
+        android:textSize="5sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.141"
+        app:layout_constraintHorizontal_bias="0.138"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView6" />
 
@@ -115,7 +143,7 @@
         android:layout_height="wrap_content"
         android:text="@string/noteText"
         android:textColor="@color/white"
-        android:textSize="8sp"
+        android:textSize="5sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"

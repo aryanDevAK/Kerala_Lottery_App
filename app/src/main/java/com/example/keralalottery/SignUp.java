@@ -18,17 +18,25 @@ EditText name,mobile,emailId;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up);
 
+        //Initializing Buttons using the Function
         initializeBtn();
 
+        //Adding functionality to the Sign in Button
         btn1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                //Getting the Strings input by the user
                 String input_name = name.getText().toString();
                 String mobileNum = mobile.getText().toString();
                 String email = emailId.getText().toString();
+
+                //Store the Strings in the Database
+
+                //Verify by the mobile Number by the OTP
             }
         });
 
+        //Setting the Logint button to direct to login
         loginText.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

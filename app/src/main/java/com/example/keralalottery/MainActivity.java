@@ -24,11 +24,22 @@ TextView text3;
         btn1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
+                //Getting the Username and Mobile Number Entered
+                String username = text2.getText().toString();
+                String mobileNum = text3.getText().toString();
+
+                //Check for the Username in the Database
+
+                //Generate OTP for the Mobile Number Entered
+
+                //Starting the main Activity if the OTP is Correct
                 Intent i = new Intent(getApplicationContext(),Activity2.class);
                 startActivity(i);
             }
         });
 
+        //Function to Move to Sign in Window
         text3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

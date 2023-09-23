@@ -1,21 +1,19 @@
 package com.example.keralalottery;
 
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
-import android.view.Menu;
+
+
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class Activity2 extends AppCompatActivity {
-
+    BottomNavigationView bottomNavigationView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_2);
-    }
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater() .inflate(R.menu.bottom_navigation_menu, menu);
-        return true;
+        bottomNavigationView = findViewById(R.id.bottom_navigation);
+        bottomNavigationView.setSelectedItemId(R.id.navigation_home);
     }
 }
+

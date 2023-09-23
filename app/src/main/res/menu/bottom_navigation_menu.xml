@@ -1,0 +1,22 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/notifications"
+        android:icon="@drawable/ic_notification"
+        android:title="Home" />
+    <item
+        android:id="@+id/cart"
+        android:icon="@drawable/ic_cart"
+        android:title="Dashboard" />
+    <item
+        android:id="@+id/navigation_home"
+        android:icon="@drawable/ic_home"
+        android:title="Home" />
+    <item
+        android:id="@+id/winners"
+        android:icon="@drawable/ic_winners"
+        android:title="Profile" />
+    <item
+        android:id="@+id/user_profile"
+        android:icon="@drawable/ic_user_profile"
+        android:title="Settings" />
+</menu>
